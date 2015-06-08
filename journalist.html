@@ -24,48 +24,21 @@
         <![endif]-->
         <h1 class="visuallyhidden">Vorratsdatenspeicherrung-Simulator</h1>
 
-        <!-- <div id="preloader">
-            <div class="preloader-content">
-                <h2>Die Vorratsdatenspeicherrung kommt.</h2>
-                <h3>Folgende Simulation zeigt dir, wie mit den Daten aller Behörden & Dienste umgegangen werden kann.</h3>
-                <p>Bitte wähle eine Person</p>
-                <div class="ui column centered grid">
-                    <div class="persona-nav eight column doubling centered row">
-                        <div class="persona-nav-item column">
-                            <a href="#">
-                                <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
-                                Versicherungskaufmann
-                            </a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Politikerin</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="images/persona_journalist.png" alt="" class="ui circular image">Journalist</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Terrorist</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div id="page">
             <div id="header">
                 <div class="ui column centered grid">
                     <div class="persona-nav sixteen column doubling centered row">
+                        <div class="persona-nav-item column">
+                            <a href="index.html"><img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image"></a>
+                        </div>
+                        <div class="persona-nav-item column">
+                            <a href="lehrerin.html"><img src="images/persona_lehrer.png" alt="" class="ui circular image"></a>
+                        </div>
                         <div class="persona-nav-item active column">
-                            <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
+                            <a href="journalist.html"><img src="images/persona_journalist.png" alt="" class="ui circular image"></a>
                         </div>
                         <div class="persona-nav-item column">
-                            <img src="images/persona_lehrer.png" alt="" class="ui circular image">
-                        </div>
-                        <div class="persona-nav-item column">
-                            <img src="images/persona_journalist.png" alt="" class="ui circular image">
-                        </div>
-                        <div class="persona-nav-item column">
-                            <img src="images/persona_kriminell.png" alt="" class="ui circular image">
+                            <a href="kriminell.html"><img src="images/persona_kriminell.png" alt="" class="ui circular image"></a>
                         </div>
                     </div>
                 </div>
@@ -93,48 +66,46 @@
                                     </div>
                                 </div>
 
-                                <div class="header-icon-list">
-                                    <div class="ui column centered grid">
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Fingerabdruck vorhanden</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">DNA nicht vorhanden</div>
-                                                        </div>
+                                <div class="header-icon-list ui column centered grid">
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s fingerprint"></i>
+                                                    <div class="content">
+                                                        <div class="description">Fingerabdruck vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Biometrisches Foto vorhanden</div>
-                                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s dna"></i>
+                                                    <div class="content">
+                                                        <div class="description">DNA-Profil vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Aktuelle<br> Körpermaße</div>
-                                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s biometric"></i>
+                                                    <div class="content">
+                                                        <div class="description">Biometrisches Foto vorhanden</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s height"></i>
+                                                    <div class="content">
+                                                        <div class="description">Aktuelle<br> Körpermaße</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1015,26 +986,8 @@
                 <p></p>
             </div>
             <div class="content-section videos-links">
-
                 <h2>Weitere Informationen findest du in folgenden Videos</h2>
-                <div class="ui three column stackable grid">
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NXOJSs_0Qa8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbb9xjDKzMc" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/o6Wlt8cIqq0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
+                <i class="spinner loading big icon white"></i>
             </div>
             <div class="content-section active-links">
                 <h2>Aktiv werden</h2>
@@ -1097,5 +1050,6 @@
     <script src="js/libs/Chart.min.js"></script>
     <script src="js/libs/libs.merge.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/persona_journalist.js"></script>
     </body>
 </html>

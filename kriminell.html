@@ -23,49 +23,21 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1 class="visuallyhidden">Vorratsdatenspeicherrung-Simulator</h1>
-
-        <!-- <div id="preloader">
-            <div class="preloader-content">
-                <h2>Die Vorratsdatenspeicherrung kommt.</h2>
-                <h3>Folgende Simulation zeigt dir, wie mit den Daten aller Behörden & Dienste umgegangen werden kann.</h3>
-                <p>Bitte wähle eine Person</p>
-                <div class="ui column centered grid">
-                    <div class="persona-nav eight column doubling centered row">
-                        <div class="persona-nav-item column">
-                            <a href="#">
-                                <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
-                                Versicherungskaufmann
-                            </a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Politikerin</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="images/persona_journalist.png" alt="" class="ui circular image">Journalist</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Terrorist</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div id="page">
             <div id="header">
                 <div class="ui column centered grid">
                     <div class="persona-nav sixteen column doubling centered row">
+                        <div class="persona-nav-item column">
+                            <a href="index.html"><img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image"></a>
+                        </div>
+                        <div class="persona-nav-item column">
+                            <a href="lehrerin.html"><img src="images/persona_lehrer.png" alt="" class="ui circular image"></a>
+                        </div>
+                        <div class="persona-nav-item column">
+                            <a href="journalist.html"><img src="images/persona_journalist.png" alt="" class="ui circular image"></a>
+                        </div>
                         <div class="persona-nav-item active column">
-                            <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
-                        </div>
-                        <div class="persona-nav-item column">
-                            <img src="images/persona_lehrer.png" alt="" class="ui circular image">
-                        </div>
-                        <div class="persona-nav-item column">
-                            <img src="images/persona_journalist.png" alt="" class="ui circular image">
-                        </div>
-                        <div class="persona-nav-item column">
-                            <img src="images/persona_kriminell.png" alt="" class="ui circular image">
+                            <a href="kriminell.html"><img src="images/persona_kriminell.png" alt="" class="ui circular image"></a>
                         </div>
                     </div>
                 </div>
@@ -79,62 +51,60 @@
                                     <div class="two column doubled centered row">
                                         <div class="column ui aligned center">
                                             <div class="head-map-overlay-image ui circular image hidden">
-                                                <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
+                                                <img src="images/persona_kriminell.png" alt="" class="ui circular image">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="one column row">
                                         <div class="column">
                                             <header>
-                                                <h2 class="transition hidden">Max Mustermann</h2>
-                                                <p class="transition hidden">Versicherungskaufmann</p>
+                                                <h2 class="transition hidden">Anonym</h2>
+                                                <p class="transition hidden">Krimnell</p>
                                             </header>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="header-icon-list">
-                                    <div class="ui column centered grid">
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Fingerabdruck vorhanden</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">DNA nicht vorhanden</div>
-                                                        </div>
+                                <div class="header-icon-list ui column centered grid">
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s fingerprint"></i>
+                                                    <div class="content">
+                                                        <div class="description">Fingerabdruck vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Biometrisches Foto vorhanden</div>
-                                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s dna"></i>
+                                                    <div class="content">
+                                                        <div class="description">DNA-Profil vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Aktuelle<br> Körpermaße</div>
-                                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s biometric"></i>
+                                                    <div class="content">
+                                                        <div class="description">Biometrisches Foto vorhanden</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s height"></i>
+                                                    <div class="content">
+                                                        <div class="description">Aktuelle<br> Körpermaße</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,28 +121,12 @@
                 <div id="map-slider"></div>
                 <div id="map-slider-value"></div>
             </div>
-            <div class="content-section tags">
-                <ui class="ui stackable grid centered">
-                    <div class="twelve wide column centered">
-                        <div class="ui tag big labels">
-                            <div class="ui label">Mittelstand</div>
-                            <div class="ui label">Chronische Krankheit</div>
-                            <div class="ui red label popup-info" data-html="<p>Es konnten einige Datenverkehrströme identifiziert werden, welche zu illegal gelistete Server getätigt wurden.</p>">illegale Downloads</div>
-                            <div class="ui label">Rechte Tendenz</div>
-                            <div class="ui label">Autofahrer</div>
-                            <div class="ui label">Schufa-Eintrag</div>
-                        </div>
-                    </div>
-                </ui>
-            </div>
 
             <div class="content-section body-stats">
                 <div class="ui grid stackable">
                     <div class="four wide column">
                         <div class="human-wire-wrapper">
                             <img src="images/human_wire_male.png" data-lazy-desktop-src="images/human_wire_male.gif" alt="" class="ui image human-wire">
-                            <i class="circle thin icon popup-info human-marker-01" data-content="Fraktur im rechten Bein (1998)"></i>
-                            <i class="circle thin icon popup-info human-marker-02" data-content="Angeborenes Herzproblem"></i>
                         </div>
                     </div>
                     <div class="sixteen wide mobile twelve wide tablet eight wide computer column">
@@ -186,33 +140,26 @@
                                         <div class="stats-list">
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <span class="text">T5</span>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Bundeswehr-Musterung <i class="icon help circle popup-info" data-html="<p>Die Erfassung dieser Information wurde seit 2011 ausgesetzt.</p>"></i></h5>
-                                                    (06 2004)
+                                                    <h5>Bundeswehr-Musterung</h5>
                                                 </div>
                                             </div>
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <div id="circle-zahnarzt" class="circle">
-                                                        <strong></strong>
-                                                    </div>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
                                                     <h5>Prophylaxe</h5>
-                                                    (06 2004)
                                                 </div>
                                             </div>
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <div id="circle-krebs" class="circle">
-                                                        <strong></strong>
-                                                    </div>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
                                                     <h5>Krebsvorsorge</h5>
-                                                    (06 2004)
                                                 </div>
                                             </div>
                                         </div>
@@ -227,34 +174,26 @@
                                         <div class="stats-list">
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <span class="text">3,2</span>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Schulbildung <i class="icon help circle popup-info" data-html="<p>Diese Information konnte aus dem Benutzerprofil auf folgenden Sozialen Netzwerk entnommen werden:</p>
-                                                        <p><i class='icon xing'></i>xing.de</p>"></i></h5>
-                                                    Fachoberschulreife (05 2003)
+                                                    <h5>Schulbildung</h5>
                                                 </div>
                                             </div>
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <span class="text">
-                                                        <i class="heterosexual icon"></i>
-                                                    </span>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Sexualität <i class="icon help circle popup-info" data-content="Diese Information konnte durch das Surfverhalten der Person ermittelt werden."></i></h5>
-                                                    heterosexual
+                                                    <h5>Sexualität</h5>
                                                 </div>
                                             </div>
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
-                                                    <span class="text">
-                                                        <i class="heterosexual icon"></i>
-                                                    </span>
+                                                    <span class="text">?</span>
                                                 </div>
                                                 <div class="content twelve wide column">
                                                     <h5>Konfession</h5>
-                                                    Evangelisch
                                                 </div>
                                             </div>
 
@@ -269,7 +208,6 @@
                     <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
                         <div class="spider-chart">
                             <canvas id="canvas" height="200" width="200"></canvas>
-                            <i class="icon help large circle popup-info" data-content="Diese Information konnte durch das Surf- und Kommunikationsverhalten der Person ermittelt werden."></i>
                         </div>
                     </div>
                 </div>
@@ -298,46 +236,14 @@
                                     </div>
                                     <div class="six wide column">
                                         <h3>Klassifizierung</h3>
-                                        <div class="ui tag small labels">
-                                            <div class="ui label">Mittelstand</div>
-                                            <div class="ui label">Sparer</div>
-                                            <div class="ui label">Regelmäßiges Gehalt</div>
+                                        <div class="ui center aligned segment red">
+                                            Keine Daten verfügbar
                                         </div>
                                     </div>
                                 </div>
-
-                                <table class="ui table konto-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="ui center aligned segment red">
+                                    Keine Daten verfügbar
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -351,51 +257,30 @@
                                             <div class="content">
                                                 Mobiltelefon
                                                 <div class="sub header">
-                                                    0515 1846484
+                                                    -
                                                 </div>
                                             </div>
                                         </h2>
                                         <div class="ui grid communication-stats">
                                             <div class="eight wide column">
                                                 <div class="ui grid">
-                                                    <div class="six wide column">8</div>
+                                                    <div class="six wide column">-</div>
                                                     <div class="ten wide column">eingehende Anrufe</div>
                                                 </div>
                                             </div>
                                             <div class="eight wide column">
                                                 <div class="ui grid">
-                                                    <div class="six wide column">4</div>
+                                                    <div class="six wide column">-</div>
                                                     <div class="ten wide column">ausgehende Anrufe</div>
                                                 </div>
                                             </div>
                                             <div class="sixteen wide column unusual-calls">
-                                                0 ungewöhnliche Anrufe
+                                                - ungewöhnliche Anrufe
                                             </div>
                                         </div>
-                                        <table class="ui table unstackable">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="collapsing"><i class="forward mail disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="ui center aligned segment red">
+                                            Keine Daten verfügbar
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -407,51 +292,30 @@
                                             <div class="content">
                                                 Festnetz
                                                 <div class="sub header">
-                                                    0515 1846484
+                                                    -
                                                 </div>
                                             </div>
                                         </h2>
                                         <div class="ui grid communication-stats">
                                             <div class="eight wide column">
                                                 <div class="ui grid">
-                                                    <div class="six wide column">0</div>
+                                                    <div class="six wide column">-</div>
                                                     <div class="ten wide column">eingehende Anrufe</div>
                                                 </div>
                                             </div>
                                             <div class="eight wide column">
                                                 <div class="ui grid">
-                                                    <div class="six wide column">0</div>
+                                                    <div class="six wide column">-</div>
                                                     <div class="ten wide column">ausgehende Anrufe</div>
                                                 </div>
                                             </div>
                                             <div class="sixteen wide column unusual-calls">
-                                                0 ungewöhnliche Anrufe
+                                                - ungewöhnliche Anrufe
                                             </div>
                                         </div>
-                                        <table class="ui table unstackable">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="collapsing"><i class="forward mail disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="ui center aligned segment red">
+                                            Keine Daten verfügbar
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -459,439 +323,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="content-section social-tabs">
-                <div class="ui top attached tabular menu">
-                    <a class="active item" data-tab="first"><i class="facebook square icon"></i> Facebook</a>
-                    <a class="item" data-tab="second"><i class="youtube play icon"></i> Youtube</a>
-                    <a class="item" data-tab="third"><i class="twitter square icon"></i> Twitter</a>
-                </div>
-                <div class="ui bottom attached active tab segment" data-tab="first">
-                    <div class="ui grid stackable">
-                        <div class="sixteen wide mobile eight wide tablet six wide computer column">
-                            <h3 class="ui dividing header">
-                                <i class="browser icon"></i>
-                                <div class="content">
-                                    Aktivitätsprotokoll
-                                    <div class="sub header">von 'Max Mustermann'</div>
-                                </div>
-                            </h3>
-                            <div class="ui feed dividing">
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a>
-                                            gefällt nun <a class="user">Bild Zeitung</a>
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf facebook</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a> chattet mit
-                                            <a class="user">Elliot Fu</a>
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf facebook</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Elliot Fu</a>
-                                            markiert <a class="user">Max Mustermann</a> auf einem <a>Foto</a>
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf facebook</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a> chattet mit
-                                            <a class="user">Maria Schulz</a>
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                           <a class="like"><i class="search icon"></i> Detail-Informationen auf facebook</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Elliot Fu</a> chattet mit
-                                            <a class="user">Fritz Friedrich</a>
-                                            <div class="date">vor 2 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                           <a class="like"><i class="search icon"></i> Detail-Informationen auf facebook</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sixteen wide mobile eight wide tablet four wide computer column">
-                            <h3 class="ui dividing header">
-                                <i class="thumbs outline up icon"></i>
-                                <div class="content">
-                                    'Gefällt mir'-Angaben
-                                    <div class="sub header">Sortiert nach Auffälligkeit</div>
-                                </div>
-                            </h3>
-                            <div class="ui grid">
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <h3 class="ui dividing header">
-                                <i class="users icon"></i>
-                                <div class="content">
-                                    Gruppen-Mitgliedschaft
-                                    <div class="sub header">Sortiert nach Auffälligkeit</div>
-                                </div>
-                            </h3>
-                            <div class="ui grid">
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                                <div class="four wide column">
-                                    <div class="social-group-image">
-                                        <img class="ui image" src="images/fb_group_dummy_01.png">
-                                        <div class="social-group-image-label">ProNRW</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="sixteen wide mobile sixteen wide tablet six wide computer column">
-                            <h3 class="ui dividing header">
-                                <i class="share alternate icon"></i>
-                                <div class="content">
-                                    Aktive Verbindungen zu anderen Nutzern
-                                    <div class="sub header">Profilaufrufe, Chataktivitäten etc.</div>
-                                </div>
-                            </h3>
-                            <div id="network-container"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui bottom attached tab segment" data-tab="second">
-                    <div class="ui grid stackable">
-                        <div class="sixteen wide mobile eight wide tablet six wide computer column">
-                            <h3 class="ui dividing header">
-                                <i class="browser icon"></i>
-                                <div class="content">
-                                    Aktivitätsprotokoll
-                                    <div class="sub header">von 'Max Mustermann'</div>
-                                </div>
-                            </h3>
-                            <div class="ui feed dividing">
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a>
-                                            hat <a class="user">RT Deutsch</a> abonniert.
-                                            <div class="date">vor 13 Stunden</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a> gefällt das <a class="user">Video</a> von
-                                            <a class="user">Elliot Fu</a>
-                                            <div class="date">vor 15 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a> hat ein <a class="user">Video</a> von
-                                            <a class="user">Kevin</a> angesehen
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                            <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Max Mustermann</a> hat ein <a class="user">Video</a> von
-                                            <a class="user">Kevin</a> angesehen
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                           <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Elliot Fu</a>
-                                            added you as a friend
-
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                           <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="sixteen wide mobile ten wide tablet ten wide computer column">
-                            <h3 class="ui dividing header">
-                                <i class="thumbs outline up icon"></i>
-                                <div class="content">
-                                    Beliebteste Kanäle
-                                    <div class="sub header">Sortiert nach Häufigkeit</div>
-                                </div>
-                            </h3>
-                            <div class="ui grid">
-                                <div class="eight wide column">
-                                    <div class="ui divided relaxed list yt-charts">
-                                        <div class="item">
-                                            <div class="count">1</div>
-                                            <img src="images/youtube/rt_deutsch.png" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">RT Deutsch</a>
-                                                <div class="description">28 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">2</div>
-                                            <img src="images/youtube/n24.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">N24</a>
-                                                <div class="description">22 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">3</div>
-                                            <img src="images/youtube/kenfm.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">KenFM</a>
-                                                <div class="description">14 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">4</div>
-                                            <img src="images/youtube/fail_army.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">FailArmy</a>
-                                                <div class="description">12 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">5</div>
-                                            <img src="images/youtube/gamestar.gif" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">GameStar</a>
-                                                <div class="description">11 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="eight wide column">
-                                    <div class="ui divided relaxed list yt-charts">
-                                        <div class="item">
-                                            <div class="count">6</div>
-                                            <img src="images/youtube/letsplay.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">LetsPlay</a>
-                                                <div class="description">9 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">6</div>
-                                            <img src="images/youtube/ard.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">ARD</a>
-                                                <div class="description">8 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="item">
-                                            <div class="count">7</div>
-                                            <img src="images/youtube/pietsmiet.jpg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">PietSmiet</a>
-                                                <div class="description">22 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div> -->
-                                        <div class="item">
-                                            <div class="count">8</div>
-                                            <img src="images/youtube/moviepilot.png" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">moviepilot</a>
-                                                <div class="description">6 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">9</div>
-                                            <img src="images/youtube/funny_tv.jpeg" class="ui avatar image" alt="">
-                                            <div class="content">
-                                                <a class="header">Funny TV</a>
-                                                <div class="description">5 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="count">10</div>
-                                            <img src="images/youtube/nsl.gif" class="ui avatar image" alt="RIP 'Muss mann wissen!' Axel Stoll" title="RIP 'Muss mann wissen!' Axel Stoll">
-                                            <div class="content">
-                                                <a class="header">Allgemeiner Deutscher NSL Sender</a>
-                                                <div class="description">3 Videos in der letzten Woche.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="ui bottom attached tab segment" data-tab="third"> Third </div>
-            </div>
-
             <div class="meta-bar">
                 <div class="container">
                     <div class="social-share">
@@ -901,6 +332,64 @@
                 </div>
             </div>
 
+            <div class="criminal-info">
+                <div class="ui grid">
+                    <div class="ui column">
+                        <div class="criminal-info-content">
+                            <div class="header">
+                                <h2>Hinweis</h2>
+                                <p>Nicht jede kriminelle Person kann erfasst werden. Es gibt zahlreiche Möglichkeiten die durch die Vorratsdatenspeicherung aufgelegten Maßnahmen zu umgehen.</p>
+                            </div>
+                            <div class="ui big horizontal divided relaxed list">
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Onion Routing & Proxy-Server</span>
+                                        <!-- <div class="description">asdad ad as</div> -->
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Virtual Private Network (VPN)</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Anonym registrierte SIM-Karten</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Internetcafe</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Öffentliche Telefone</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">VoIP-Telefonie</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">Verzicht auf verfolgbare Technologien im Kontext der krimnellen Tätigkeit</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <span class="header">uvw.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
             <div class="content-section prolog">
                 <h2>Fiktion oder Realität?</h2>
                 <p>Abgesehen davon das wir keine echten Personen zeigen, liegt alles im technisch möglichen Bereich und manches wird nachweislich von verschiedenen staatlichen Behörden und Geheimdiensten bereits umgesetzt.</p>
@@ -908,7 +397,6 @@
                 <hr>
                 <p>Die Bundesregierung plant erneut ein Gesetz zur Speicherung von Verkehrs- und Standortdaten, <strong>die Vorratsdatenspeicherung.</strong></p>
                 <p><strong>Sie legen somit erneut den Grundstein für eine offizielle Infrastruktur, zum Eingriff in die Privatssphäre des Bürgers.</strong></p>
-                <!-- <p>Als Grund werden gerne emotional behaftete Feindbilder genannt: Terroristen und Kinderpornographie.</p> -->
                 <hr>
                 <p>Die Speicherung und Auswertung der Verkehrsdaten ist eine gängige Ermittlungsmethode. Allerdings erfolgt bisher die Speicherung auf gerichtlichen Beschluss.</p>
                 <p>Mit der Einführung des Gesetzes efolgt stets eine Speicherung. Lediglich die Herrausgabe erfolgt auf gerichtlichen Beschluss.</p>
@@ -916,10 +404,6 @@
             <div class="content-section gruende-dagegen">
                 <h2>6 Gründe gegen die Vorratsdatenspeicherung</h2>
                 <ul class="gruende-dagegen-list">
-                    <!-- <li><span class="indicator">01</span>Die Erfassung der Daten von Privatpersonen erfolgt ausnahmslos</li>
-                    <li><span class="indicator">02</span>Die Gründe für eine Auswertung dieser Daten sind nicht klar definiert</li>
-                    <li><span class="indicator">03</span>Es besteht die Möglichkeit ein sehr genaues Bewegungsprofil eines Menschen automatisiert zu erstellen</li>
-                    <li><span class="indicator">04</span>Anhand der Meta-Daten lassen sich sehr private Informationen, z.B. der Anruf bei einem Psychater ermitteln</li> -->
                     <li><span class="indicator">1</span>Ansammlungen von Dateien sind ein großes Sicherheitsrisiko.</li>
                     <li><span class="indicator">2</span>Im Falle eines plötzlichen Regierungswechsel oder einer Krisensituation, können die gesammelten Informationen zweckentfremdet werden.</li>
                     <li><span class="indicator">3</span>Die Maßnahmen der Vorratsdatenspeicherung - zur Bekämpfung der Kriminalität - lassen sich sehr einfach umgehen.</li>
@@ -1015,26 +499,8 @@
                 <p></p>
             </div>
             <div class="content-section videos-links">
-
                 <h2>Weitere Informationen findest du in folgenden Videos</h2>
-                <div class="ui three column stackable grid">
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NXOJSs_0Qa8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbb9xjDKzMc" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/o6Wlt8cIqq0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
+                <i class="spinner loading big icon white"></i>
             </div>
             <div class="content-section active-links">
                 <h2>Aktiv werden</h2>
@@ -1097,5 +563,6 @@
     <script src="js/libs/Chart.min.js"></script>
     <script src="js/libs/libs.merge.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/persona_kriminell.js"></script>
     </body>
 </html>

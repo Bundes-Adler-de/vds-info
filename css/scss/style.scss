@@ -16,6 +16,11 @@ $red: #f95b53;
 $green: #5dd06d;
 $grey: #777;
 
+
+
+/* Helper-Classes
+*******************************************************************************/
+
 .tc-red { color: $red; }
 .tc-green { color: $green; }
 
@@ -44,6 +49,28 @@ i.icon {
     visibility: hidden;
     height: 0px;
 }
+
+/* Icon-Sprite
+*******************************************************************************/
+.icon-s {
+    background-image: url(../images/icon_sprite.png);
+    background-size: 30px auto;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.icon-s.fingerprint {
+    background-position: 0 0;
+}
+.icon-s.dna {
+    background-position: 0 -30px;
+}
+.icon-s.biometric {
+    background-position: 0 -60px;
+}
+.icon-s.height {
+    background-position: 0 -90px;
+}
 /* Typography
 *******************************************************************************/
 
@@ -62,7 +89,7 @@ h1, h2, h3, h4 {
 *******************************************************************************/
 
 body {
-    background: #e6e6e6;
+    background: #e8e8e8;
 }
 
 /* Variablen
@@ -80,6 +107,31 @@ body {
         padding: 2em 1.5em;
     }
 }
+
+/* Variablen
+*******************************************************************************/
+
+[data-vds-element="true"],
+[data-vds-element="false"] {
+    @include transition(opacity 200ms ease);
+    opacity: 1 !important;
+}
+[data-vds-element="true"],
+.vds-mode [data-vds-element="false"] {
+    opacity: 0 !important;
+    overflow: hidden;
+    height: 0 !important;
+    padding: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+}
+.vds-mode [data-vds-element="true"] {
+    opacity: 1 !important;
+    height: auto!important;
+    width: auto!important;
+    overflow: visible;
+}
+
 /* Layout
 *******************************************************************************/
 
@@ -88,7 +140,7 @@ body {
     margin: 0 auto;
     background: #f6f6f6;
     overflow-x: hidden;
-
+    position: relative;
     @include box-shadow(0 0 60px rgba(0,0,0,.2));
 }
 
@@ -97,12 +149,44 @@ body {
         border-bottom: 1px solid $mediumGrey;
         padding: 15px 10px;
         position: relative;
-        z-index: 2;
+        z-index: 999999;
         @media (min-width: 768px) {
             padding-left: 0;
             padding-right: 0;
         }
     }
+    #header .vds-switch {
+        position: absolute;
+        left: 1em;
+        bottom: 15px;
+        right: 1em;
+        text-align: center;
+        @media (min-width: 768px) {
+            right: 1.5em;
+            top: 45%;
+            left: auto;
+            bottom: auto;
+        }
+        @media (min-width: 992px) {
+            top: 35%;
+        }
+    }
+    #header .ui.grid>.persona-nav {
+        padding-bottom: 40px !important;
+        @media (min-width: 768px) {
+            padding-bottom: 0px!important;
+            padding-right: 260px!important;
+        }
+        @media (min-width: 992px) {
+            padding-bottom: 1rem!important;
+            padding-right: 1rem !important;
+        }
+        // @media (min-width: 768px) and (max-width: 991px) {
+        //     padding-bottom: 0px !important;
+        //     padding-right: 260px!important;
+        // }
+    }
+
     #header .persona-nav-item.active:after,
     #header .persona-nav-item.active:before {
         content: '';
@@ -112,27 +196,49 @@ body {
         border-width: 10px 10px 0 10px;
         border-color: $white transparent transparent transparent;
         position: absolute;
-        bottom: -10px;
+
         left: 50%;
         margin-left: -10px;
         z-index: 2;
+        bottom: -50px;
+        @media (min-width: 768px) {
+            bottom: -10px;
+        }
         @media (min-width: 991px) {
             bottom:-24px;
         }
     }
     #header .persona-nav-item.active:after {
-        bottom: -11px;
+        bottom: -51px;
         border-color: $mediumGrey transparent transparent transparent;
         z-index: 1;
+        @media (min-width: 768px) {
+            bottom: -11px;
+        }
         @media (min-width: 991px) {
             bottom:-25px;
         }
     }
+        #header .persona-nav-item img {
+            opacity: .6;
+            @include filter(saturate(50%));
+            @include transition(opacity 500ms ease);
+            max-width: 70px;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            @media (min-width: 768px) {
+                max-width: 100%;
 
+            }
+        }
+        #header .persona-nav-item:hover img,
+        #header .persona-nav-item.active img {
+            opacity: 1;
+            @include filter(saturate(100%));
+        }
+    #head-map-wrapper { position: relative; }
 
-    #head-map-wrapper {
-        position: relative;
-    }
         #head-map-wrapper-overflow {
             overflow: hidden;
             position: relative;
@@ -190,32 +296,44 @@ body {
         .head-map-overlay-content .one.row {
             padding-top: 0;
         }
-        .header-icon-list {
+        .ui.grid.header-icon-list {
             margin-top: 2rem;
             border-top: 1px solid $mediumGrey;
-            padding-top: 2rem;
+            border-bottom: 1px solid $mediumGrey;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
             background: rgba(255,255,255,.8);
             @media (min-width: 768px) {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
-                margin-top: 0;
+                margin: 0;
                 border: 0;
-                padding-top: 25px;
+                padding-top: 1rem;
                 padding-bottom: 15px;
                 border-top: 1px solid $mediumGrey;
             }
         }
-        .head-map-overlay-content .list {
+        .head-map-overlay-content .list .icon-s {
+            float: left;
+            margin-right: 4px;
+            margin-left: -5px;
         }
+
         .head-map-overlay-content .ui.grid>.header-icon-list-row {
-            padding-top: 0;
+            @media (min-width: 768px) {
+                margin: -1rem;
+            }
         }
         .head-map-overlay-content .ui.grid>.header-icon-list-row .column .item {
             font-size: .9em;
             line-height: .9em;
             color: $darkGrey;
+            opacity: .1;
+        }
+        .head-map-overlay-content .ui.grid>.header-icon-list-row .column .item.active {
+            opacity: 1;
         }
         .head-map-overlay-content .ui.grid>.header-icon-list-row .column:first-child .item {
             padding-left: 1em;
@@ -231,6 +349,7 @@ body {
             margin: 0 40px;
         }
     }
+        #map-slider-value-container { position: relative; }
         #map-slider-value {
             text-align: center;
             padding-top: 28px;
@@ -675,6 +794,12 @@ body {
         width: 100%;
         height: 100%;
     }
+    .videos-links .spinner {
+        margin: 50px auto 80px;
+        display: block;
+    }
+
+
 /* Aktiv werden
 *******************************************************************************/
 .active-links {
@@ -839,12 +964,47 @@ html.preloader,
         }
     }
 
+
+/* Criminal Info
+*******************************************************************************/
+
+.criminal-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: rgba(255,255,255,.8);
+
+    padding-top: 100px;
+}
+    .criminal-info-content {
+        max-width: 830px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 40px;
+    }
+        .criminal-info-content .header {
+            margin-bottom: 20px;
+        }
+            .criminal-info-content h2 {
+                font-size: 28px;
+                line-height: 26px;
+                margin-bottom: 15px;
+            }
+            .criminal-info-content p {
+                font-size: 20px;
+                line-height: 30px;
+            }
+            .criminal-info-content .ui.horizontal.list>.item {
+                margin-bottom: 5px;
+            }
+
+
 /* Bundes-Adler
 *******************************************************************************/
 
-.bundes-adler {
-
-}
     .bundes-adler p {
         font-size: 1.5em;
         margin-top: 2rem;

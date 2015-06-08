@@ -11,9 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/libs/libs.merged.min.css">
-
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
-
         <link rel="stylesheet" href="css/style.css">
 
         <script src="js/libs/modernizr-2.8.3.min.js"></script>
@@ -23,50 +21,28 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1 class="visuallyhidden">Vorratsdatenspeicherrung-Simulator</h1>
-
-        <!-- <div id="preloader">
-            <div class="preloader-content">
-                <h2>Die Vorratsdatenspeicherrung kommt.</h2>
-                <h3>Folgende Simulation zeigt dir, wie mit den Daten aller Behörden & Dienste umgegangen werden kann.</h3>
-                <p>Bitte wähle eine Person</p>
-                <div class="ui column centered grid">
-                    <div class="persona-nav eight column doubling centered row">
-                        <div class="persona-nav-item column">
-                            <a href="#">
-                                <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
-                                Versicherungskaufmann
-                            </a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Politikerin</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="images/persona_journalist.png" alt="" class="ui circular image">Journalist</a>
-                        </div>
-                        <div class="persona-nav-item column">
-                            <a href="#"><img src="http://semantic-ui.com/images/home-avatar.png" alt="" class="ui circular image"> Terrorist</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div id="page">
             <div id="header">
                 <div class="ui column centered grid">
                     <div class="persona-nav sixteen column doubling centered row">
                         <div class="persona-nav-item active column">
-                            <img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image">
+                            <a href="index.html"><img src="images/persona_versicherungskaufmann.png" alt="" class="ui circular image"></a>
                         </div>
                         <div class="persona-nav-item column">
-                            <img src="images/persona_lehrer.png" alt="" class="ui circular image">
+                            <a href="lehrerin.html"><img src="images/persona_lehrer.png" alt="" class="ui circular image"></a>
                         </div>
                         <div class="persona-nav-item column">
-                            <img src="images/persona_journalist.png" alt="" class="ui circular image">
+                            <a href="journalist.html"><img src="images/persona_journalist.png" alt="" class="ui circular image"></a>
                         </div>
                         <div class="persona-nav-item column">
-                            <img src="images/persona_kriminell.png" alt="" class="ui circular image">
+                            <a href="kriminell.html"><img src="images/persona_kriminell.png" alt="" class="ui circular image"></a>
                         </div>
+                    </div>
+                </div>
+                <div class="vds-switch">
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="vds-merkmale">
+                        <label>Nur VDS-Merkmale zeigen</label>
                     </div>
                 </div>
             </div>
@@ -92,49 +68,46 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="header-icon-list">
-                                    <div class="ui column centered grid">
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Fingerabdruck vorhanden</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">DNA nicht vorhanden</div>
-                                                        </div>
+                                <div class="header-icon-list ui column centered grid" data-vds-element="false">
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s fingerprint"></i>
+                                                    <div class="content">
+                                                        <div class="description">Fingerabdruck vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="two column doubled row header-icon-list-row">
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Biometrisches Foto vorhanden</div>
-                                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item">
+                                                    <i class="icon-s dna"></i>
+                                                    <div class="content">
+                                                        <div class="description">DNA-Profil vorhanden</div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column">
-                                                <div class="ui list">
-                                                    <div class="item">
-                                                        <i class="help icon"></i>
-                                                        <div class="content">
-                                                            <div class="description">Aktuelle<br> Körpermaße</div>
-                                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="two column doubled row header-icon-list-row">
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s biometric"></i>
+                                                    <div class="content">
+                                                        <div class="description">Biometrisches Foto vorhanden</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui list">
+                                                <div class="item active">
+                                                    <i class="icon-s height"></i>
+                                                    <div class="content">
+                                                        <div class="description">Aktuelle<br> Körpermaße</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -147,26 +120,26 @@
                     </div>
                 </div>
             </div>
-            <div class="content-section map-slider">
+            <div class="content-section map-slider" data-vds-element="false">
                 <div id="map-slider"></div>
-                <div id="map-slider-value"></div>
+                <div id="map-slider-value-container"><div id="map-slider-value">12:00 Uhr</div></div>
             </div>
             <div class="content-section tags">
                 <ui class="ui stackable grid centered">
                     <div class="twelve wide column centered">
                         <div class="ui tag big labels">
-                            <div class="ui label">Mittelstand</div>
-                            <div class="ui label">Chronische Krankheit</div>
+                            <div class="ui label" data-vds-element="false">Oberschicht</div>
+                            <div class="ui label" data-vds-element="false">Chronische Krankheit</div>
                             <div class="ui red label popup-info" data-html="<p>Es konnten einige Datenverkehrströme identifiziert werden, welche zu illegal gelistete Server getätigt wurden.</p>">illegale Downloads</div>
                             <div class="ui label">Rechte Tendenz</div>
                             <div class="ui label">Autofahrer</div>
-                            <div class="ui label">Schufa-Eintrag</div>
+                            <div class="ui label" data-vds-element="false">Schufa-Eintrag</div>
                         </div>
                     </div>
                 </ui>
             </div>
 
-            <div class="content-section body-stats">
+            <div class="content-section body-stats" data-vds-element="false">
                 <div class="ui grid stackable">
                     <div class="four wide column">
                         <div class="human-wire-wrapper">
@@ -211,8 +184,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Krebsvorsorge</h5>
-                                                    (06 2004)
+                                                    <h5>Gesundheitliche Risiken</h5>
+                                                    <div class="ui tag mini labels" data-vds-element="false">
+                                                        <div class="ui label">Raucher</div> <div class="ui label">Trinkt Alkohol</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -261,8 +236,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -275,14 +248,12 @@
                 </div>
             </div>
 
-
-
-
             <div class="content-section">
                 <div class="ui two column grid doubling stackable">
                     <div class="column">
+
                         <div class="ui fluid card">
-                            <div class="content">
+                            <div class="content" data-vds-element="false">
                                 <h2 class="ui header">
                                     <i class="area chart icon"></i>
                                     <div class="content">
@@ -299,7 +270,7 @@
                                     <div class="six wide column">
                                         <h3>Klassifizierung</h3>
                                         <div class="ui tag small labels">
-                                            <div class="ui label">Mittelstand</div>
+                                            <div class="ui label">Oberschicht</div>
                                             <div class="ui label">Sparer</div>
                                             <div class="ui label">Regelmäßiges Gehalt</div>
                                         </div>
@@ -338,6 +309,11 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="content" data-vds-element="true">
+                                <div class="ui center aligned segment">
+                                    Der Zugriff auf die Kontoaktivitäten ist nicht Bestandteil der Vorratsdatenspeicherung.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -460,7 +436,7 @@
                 </div>
             </div>
 
-            <div class="content-section social-tabs">
+            <div class="content-section social-tabs" data-vds-element="false">
                 <div class="ui top attached tabular menu">
                     <a class="active item" data-tab="first"><i class="facebook square icon"></i> Facebook</a>
                     <a class="item" data-tab="second"><i class="youtube play icon"></i> Youtube</a>
@@ -1015,26 +991,8 @@
                 <p></p>
             </div>
             <div class="content-section videos-links">
-
                 <h2>Weitere Informationen findest du in folgenden Videos</h2>
-                <div class="ui three column stackable grid">
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NXOJSs_0Qa8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbb9xjDKzMc" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/o6Wlt8cIqq0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-
+                <i class="spinner loading big icon white"></i>
             </div>
             <div class="content-section active-links">
                 <h2>Aktiv werden</h2>
@@ -1097,5 +1055,6 @@
     <script src="js/libs/Chart.min.js"></script>
     <script src="js/libs/libs.merge.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/persona_versicherungskaufmann.js"></script>
     </body>
 </html>
