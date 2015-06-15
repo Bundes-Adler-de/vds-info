@@ -71,12 +71,17 @@ i.icon {
 .icon-s.height {
     background-position: 0 -90px;
 }
+.icon-s.christ {
+    background-position: 0 -120px;
+}
 /* Typography
 *******************************************************************************/
 
 body {
     font-family: 'Roboto Condensed','Helvetica Neue',Arial,Helvetica,sans-serif;
     font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
@@ -249,7 +254,10 @@ body {
         #head-map {
             height: 200px;
             @media (min-width: 768px) {
-                height: 320px;
+                height: 420px;
+            }
+            @media (min-width: 991px) {
+                height: 460px;
             }
         }
         #head-map-overlay {
@@ -342,6 +350,8 @@ body {
 
     .map-slider {
         padding-top: 0;
+        position: relative;
+        @include transition(padding 200ms ease)
     }
     .map-slider #map-slider {
         margin: 0 30px;
@@ -353,6 +363,7 @@ body {
         #map-slider-value {
             text-align: center;
             padding-top: 28px;
+            position: relative;
         }
         .map-slider .noUi-horizontal {
             height: 6px;
@@ -369,7 +380,49 @@ body {
     .map-slider .noUi-base {
         z-index: 9999;
     }
-
+    .vds-mode .map-slider {
+        padding: 1rem 12rem;
+    }
+    .map-slider-overlay {
+        background: #f6f6f6;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        @include transition(opacity 400ms ease);
+    }
+    .vds-mode .map-slider-overlay {
+        opacity: .6;
+        z-index: 9999;
+    }
+    .map-slider-overlay-right,
+    .map-slider-overlay-left {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        top: -20px;
+        color: #000;
+        font-size: 50px;
+        font-weight: 800;
+        @include transition(opacity 800ms ease);
+    }
+    .map-slider-overlay-left {
+        left: -30px;
+    }
+    .map-slider-overlay-right {
+        right: -50px;
+    }
+    .map-slider-overlay-right .red {
+        color: #d95c5c;
+    }
+    .vds-mode .map-slider-overlay-right,
+    .vds-mode .map-slider-overlay-left {
+        opacity: .8;
+        z-index: 99999;
+    }
 
 /* Tags
 *************************************************/
@@ -385,14 +438,15 @@ body {
     margin-top: 20px;
 }
 .circle {
-  position: relative;
-  text-align: center;
-  padding-top: 2px;
+    position: relative;
+    text-align: center;
+    padding-top: 2px;
 }
     .circle strong {
         position: absolute;
-        top: 15px;
+        top: 50%;
         left: 0;
+        margin-top: -9px;
         right: 0;
         width: 100%;
         text-align: center;
@@ -400,7 +454,9 @@ body {
         font-size: 14px;
         line-height: 1em;
     }
-
+    .circle canvas {
+        width: 100%;
+    }
 
 .ui.communication-stats {
     border-top: 1px solid #cdcdcd;
@@ -423,6 +479,9 @@ body {
         text-align: center;
         font-size: .9rem;
         background: $whiteGrey;
+    }
+    .fluid.card .table .icon {
+        margin-right: 0;
     }
 
 /* Konto-Aktivitaeten
@@ -451,6 +510,22 @@ body {
 .ui.table.konto-table tbody tr td.hidden-phone .icon {
 }
 
+
+
+/* Swiper
+*************************************************/
+.swiper-container {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 1rem;
+}
+.swiper-container-horizontal > .swiper-pagination {
+    position: static;
+    margin-bottom: -8px;
+}
+.swiper-pagination-bullet-active {
+    background-color: $grey;
+}
 /* Body-Stats
 *************************************************/
 .body-stats .human-wire-wrapper {
@@ -490,6 +565,9 @@ body {
             text-align: center;
             font-weight: 700;
             font-size: 30px;
+        }
+        .value.four.wide.column {
+            padding-right: 0;
         }
     .spider-chart {
         width: 100%;
@@ -582,6 +660,20 @@ body {
         padding: 0 10px 0 10px;
         width: 40px;
         text-align: center;
+    }
+
+    .ui.segment.twitter-placeholder {
+        padding: 40px 60px;
+        text-align: center;
+    }
+        .twitter-placeholder p .icon {
+            margin: 0;
+            height: 1.3em;
+        }
+
+    .yt-charts .header {
+        white-space: nowrap;
+
     }
 
 /* Prolog
@@ -1002,8 +1094,69 @@ html.preloader,
             }
 
 
+
+/* Site-Info
+*******************************************************************************/
+
+.ui.grid.site-info {
+    padding: 2rem 0;
+    margin: 3rem 0;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    clear: both;
+}
+    .ui.grid.site-info p {
+        font-size: 20px;
+        line-height: 35px;
+        color: $whiteGrey;
+        font-weight: 300;
+        margin: 0;
+        @media (min-width: 950px) {
+            line-height: 45px;
+        }
+    }
+    .site-info p .icon {
+        font-size: 34px;
+        line-height: 42px;
+        vertical-align: middle;
+    }
+
+/* Comments
+*******************************************************************************/
+.comments h2 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+    .comments h2 small {
+        font-size: 25px;
+        line-height: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+
+
+
+.leaflet-popup-content {
+  margin: 10px 20px;
+  line-height: 1.4;
+  width: 180px !important;
+}
+
+
+.leaflet-popup-content p {
+  margin: 0 0 14px;
+  font-size: 12px;
+}
 /* Bundes-Adler
 *******************************************************************************/
+    .bundes-adler {
+        border-top: 1px solid $mediumGrey;
+        background-color: #fff;
+    }
 
     .bundes-adler p {
         font-size: 1.5em;

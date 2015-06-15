@@ -1,3 +1,23 @@
+/* AutoHeight Plugin */
+(function($) {
+    $.fn.autoheight = function () {
+        var maxHeightSoFar = 0;
+        var elemHeight = 0; // only a temp var
+
+        return $(this)
+            .css("height", '')
+            .each(function(i, thumbnail) {
+                elemHeight = $(thumbnail).height();
+                if (elemHeight > maxHeightSoFar) {
+                    maxHeightSoFar = elemHeight;
+                }
+            })
+            .height(maxHeightSoFar);
+    };
+})(jQuery);
+
+
+
 
 $(document).ready(function() {
 
@@ -17,30 +37,43 @@ $(document).ready(function() {
         $(this).attr('src', lazySrc);
     });
 
-    // Circles
+    // Swiper Stats
     // -------------------------------------- //
 
-    $('#circle-zahnarzt').circleProgress({
-        value: .75,
-        size: 40,
-        lineCap: 'round',
-        fill: {
-            color: "#333"
-        }
-    }).on('circle-animation-progress', function(event, progress, stepValue) {
-        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    //initialize swiper when document ready
+    var mySwiper1 = new Swiper ('.swiper-container1', {
+        // Navigation arrows
+        nextButton: '.swiper-container1 .swiper-button-next',
+        prevButton: '.swiper-container1 .swiper-button-prev',
+        // If we need pagination
+        pagination: '.swiper-container1 .swiper-pagination',
+        spaceBetween: 20,
+        paginationClickable: true
     });
-    $('#circle-krebs').circleProgress({
-        value: .25,
-        size: 40,
-        lineCap: 'round',
-        fill: {
-            color: "#333"
-        }
-    }).on('circle-animation-progress', function(event, progress, stepValue) {
-        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    var mySwiper2 = new Swiper ('.swiper-container2', {
+        // Navigation arrows
+        nextButton: '.swiper-container2 .swiper-button-next',
+        prevButton: '.swiper-container2 .swiper-button-prev',
+        // If we need pagination
+        pagination: '.swiper-container2 .swiper-pagination',
+        spaceBetween: 20,
+        paginationClickable: true
+    });
+    var mySwiper3 = new Swiper ('.swiper-container3', {
+        // Navigation arrows
+        nextButton: '.swiper-container3 .swiper-button-next',
+        prevButton: '.swiper-container3 .swiper-button-prev',
+        // If we need pagination
+        pagination: '.swiper-container3 .swiper-pagination',
+        spaceBetween: 20,
+        paginationClickable: true
     });
 
+    // Auto-height: Stat-Boxes
+    // -------------------------------------- //
+    if (Modernizr.mq('(min-width: 768px)')) {
+        $('.box-stats-equal').autoheight();
+    }
 
     // Initialize YouTube-Videos only when visible
     $('.content-section.videos-links').visibility({
@@ -52,6 +85,19 @@ $(document).ready(function() {
         }
     });
 
+    // Date-Replacements
+    // -------------------------------------- //
+
+    var d = new Date();
+    var year    = d.getFullYear().toString().substr(2,2);
+    var month   = ("0" + (d.getMonth()+1)).slice(-2);
+    var day     = ("0" + (d.getDate())).slice(-2);
+    var yesterday = day - 1;
+    var tdbyesterday = day - 2;
+
+    $('[data-date="today"]').html(day + '.' + month + '.' + year );
+    $('[data-date="yesterday"]').html(yesterday + '.' + month + '.' + year );
+    $('[data-date="tdbyesterday"]').html(tdbyesterday + '.' + month + '.' + year );
 
 
     // Semantic-Ui
@@ -67,7 +113,6 @@ $(document).ready(function() {
             } else {
                 $('html').removeClass('vds-mode');
                 // $('[data-vds-element="true"]').transition('show');
-
             }
         }
     });
@@ -151,6 +196,13 @@ $(document).ready(function() {
         } else {
             $('.tags .tag.labels').addClass('big');
         }
+
+        // Auto-height: Stat-Boxes
+        // -------------------------------------- //
+        if (Modernizr.mq('(min-width: 768px)')) {
+            $('.box-stats-equal').autoheight();
+        }
+
     });
 
 

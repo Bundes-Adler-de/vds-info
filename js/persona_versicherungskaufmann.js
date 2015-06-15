@@ -30,7 +30,7 @@ $(document).ready(function() {
         var mapSliderValue = $('#map-slider').val().substr(0, 2);
             console.log(mapSliderValue);
             if (mapSliderValue == '1:') {
-                             map.setView([51.2128709098241,6.781315500769097 - .028500000000000], 13);
+                             map.setView([51.2128709098241,6.781315500769097 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.2128709098241,6.781315500769097]);
             }
             if (mapSliderValue == '2:') {
@@ -54,20 +54,20 @@ $(document).ready(function() {
                 positionCircle.setLatLng([51.2128709098241,6.781315500769097]);
             }
             if (mapSliderValue == '7:') {
-                             map.setView([51.2128709098241,6.781315500769097 - .028500000000000], 13);
+                             map.setView([51.2128709098241,6.781315500769097 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.2128709098241,6.781315500769097]);
             }
             if (mapSliderValue == '8:') {
-                             map.setView([51.23601776989801,6.7831544677978854 - .028500000000000], 13);
+                             map.setView([51.23601776989801,6.7831544677978854 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.23601776989801,6.7831544677978854])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
             }
             if (mapSliderValue == '9:') {
-                             map.setView([51.23857033845579,6.791651705957065 - .028500000000000], 13);
+                             map.setView([51.23857033845579,6.791651705957065 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.23857033845579,6.791651705957065]).closePopup().bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 ausgehende Anrufe<br><i class="icon angle right"></i>822 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '10') {
-                             map.setView([51.22972978643348,6.812594393945346 - .028500000000000], 13);
+                             map.setView([51.22972978643348,6.812594393945346 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.22972978643348,6.812594393945346])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>368 kb Online-Traffic</p>').openPopup();
             }
@@ -76,32 +76,32 @@ $(document).ready(function() {
                 positionCircle.setLatLng([51.22927293364021,6.813731650567661]);
             }
             if (mapSliderValue == '12') {
-                             map.setView([51.2144630725053,6.830790499902378 - .028500000000000], 13);
+                             map.setView([51.2144630725053,6.830790499902378 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.2144630725053,6.830790499902378])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
             }
             if (mapSliderValue == '13') {
-                             map.setView([51.210968218152956,6.836326579309116 - .028500000000000], 13);
+                             map.setView([51.210968218152956,6.836326579309116 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.210968218152956,6.836326579309116])
                     .bindPopup('<p><i class="icon cart large"></i> Essen im Restaurant</p><p><i class="icon angle right"></i>-8.90€</p><p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>248 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '14') {
-                             map.setView([51.21313237077351,6.807702044702182 - .028500000000000], 13);
+                             map.setView([51.21313237077351,6.807702044702182 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.21313237077351,6.807702044702182])
                     .bindPopup('<p><i class="icon money large"></i>Geldautomat in der Bankfiliale</p> <p>-250,00€</p>').openPopup();
             }
             if (mapSliderValue == '15') {
-                             map.setView([51.22065906600379,6.787960986352573 - .028500000000000], 13);
+                             map.setView([51.22065906600379,6.787960986352573 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.22065906600379,6.787960986352573])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 ausgehende Anrufe<br><i class="icon angle right"></i>1 eingehender Anruf</p>').openPopup();
             }
             if (mapSliderValue == '16') {
-                             map.setView([51.369796685588504,6.7726036858887255 - .028500000000000], 13);
+                             map.setView([51.369796685588504,6.7726036858887255 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.369796685588504,6.7726036858887255])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf</p>').openPopup();
             }
             if (mapSliderValue == '17') {
-                             map.setView([51.4300383, 6.749429400000054 - .028500000000000], 13);
+                             map.setView([51.4300383, 6.749429400000054 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.4300383, 6.749429400000054])
                     .bindPopup('<p><i class="icon cart large"></i> Einkauf in der Tankstelle</p><p><i class="icon angle right"></i>-49.68€</p>').openPopup();
             }
@@ -110,12 +110,12 @@ $(document).ready(function() {
                 positionCircle.setLatLng([51.4300383, 6.749429400000054]);
             }
             if (mapSliderValue == '19') {
-                             map.setView([51.38067281732634,6.774835283789116 - .028500000000000], 13);
+                             map.setView([51.38067281732634,6.774835283789116 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([51.38067281732634,6.774835283789116])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 Anruf in Abwesenheit</p>').openPopup();
             }
             if (mapSliderValue == '20') {
-                             map.setView([51.214215060423946,6.772775347265679], 13);
+                             map.setView([51.214215060423946,6.772775347265679], 13).closePopup();
                 positionCircle.setLatLng([51.214215060423946,6.772775347265679])
                     .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf</p>').openPopup();
             }
@@ -258,7 +258,29 @@ $(document).ready(function() {
         }
     );
 
+    // Circles
+    // -------------------------------------- //
 
+    $('#circle-zahnarzt').circleProgress({
+        value: .75,
+        size: 120,
+        lineCap: 'round',
+        fill: {
+            color: "#333"
+        }
+    }).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    });
+    $('#circle-krebs').circleProgress({
+        value: .80,
+        size: 120,
+        lineCap: 'round',
+        fill: {
+            color: "#d95c5c"
+        }
+    }).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    });
     // Chart.js
     // -------------------------------------- //
 

@@ -63,7 +63,29 @@ $(document).ready(function() {
     });
 
 
+    // Circles
+    // -------------------------------------- //
 
+    $('#circle-zahnarzt').circleProgress({
+        value: .75,
+        size: 40,
+        lineCap: 'round',
+        fill: {
+            color: "#333"
+        }
+    }).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    });
+    $('#circle-krebs').circleProgress({
+        value: .25,
+        size: 40,
+        lineCap: 'round',
+        fill: {
+            color: "#333"
+        }
+    }).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
+    });
 
     // Chart.js
     // -------------------------------------- //

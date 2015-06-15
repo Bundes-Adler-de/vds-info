@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/libs/libs.merged.min.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="css/style.css">
 
         <script src="js/libs/modernizr-2.8.3.min.js"></script>
@@ -62,7 +63,7 @@
                                     <div class="one column row">
                                         <div class="column">
                                             <header>
-                                                <h2 class="transition hidden">Max Mustermann</h2>
+                                                <h2 class="transition hidden">Thomas Mangold</h2>
                                                 <p class="transition hidden">Versicherungskaufmann</p>
                                             </header>
                                         </div>
@@ -71,7 +72,7 @@
                                 <div class="header-icon-list ui column centered grid" data-vds-element="false">
                                     <div class="two column doubled row header-icon-list-row">
                                         <div class="column">
-                                            <div class="ui list">
+                                            <div class="ui list popup-info" data-html="<p>Diese Information wird - optional - im Rahmen der Personalausweis Ausstellung erfasst.</p>">
                                                 <div class="item active">
                                                     <i class="icon-s fingerprint"></i>
                                                     <div class="content">
@@ -81,7 +82,7 @@
                                             </div>
                                         </div>
                                         <div class="column">
-                                            <div class="ui list">
+                                            <div class="ui list popup-info" data-html="<p>Diese Information wird im Rahmen der Personalausweis Ausstellung erfasst.</p>">
                                                 <div class="item">
                                                     <i class="icon-s dna"></i>
                                                     <div class="content">
@@ -93,7 +94,7 @@
                                     </div>
                                     <div class="two column doubled row header-icon-list-row">
                                         <div class="column">
-                                            <div class="ui list">
+                                            <div class="ui list popup-info" data-html="<p>Diese Information wird im Rahmen der Personalausweis Ausstellung erfasst.</p>">
                                                 <div class="item active">
                                                     <i class="icon-s biometric"></i>
                                                     <div class="content">
@@ -103,7 +104,7 @@
                                             </div>
                                         </div>
                                         <div class="column">
-                                            <div class="ui list">
+                                            <div class="ui list popup-info" data-html="<p>Diese Information wird im Rahmen der Personalausweis Ausstellung erfasst.</p>">
                                                 <div class="item active">
                                                     <i class="icon-s height"></i>
                                                     <div class="content">
@@ -120,9 +121,15 @@
                     </div>
                 </div>
             </div>
-            <div class="content-section map-slider" data-vds-element="false">
+            <div class="content-section map-slider">
                 <div id="map-slider"></div>
-                <div id="map-slider-value-container"><div id="map-slider-value">12:00 Uhr</div></div>
+                <div id="map-slider-value-container">
+                    <div id="map-slider-value">12:00 Uhr</div>
+                    <div class="map-slider-overlay-left">(</div>
+                    <div class="map-slider-overlay-right">) <a href="https://netzpolitik.org/2015/standort-bei-beginn-der-internetverbindung-bewegungsprofile-durch-vorratsdatenspeicherung-leicht-gemacht/" target="_blank" class="red icon help circle popup-info" data-html="<p>Laut Gesetzentwurf sollen keine Bewegungsprofile erstellt werden. Jedoch werden alle notwendigen Daten, um ein umfangreiches Bewegungsprofil zu erstellen erfasst.</p>">*</a></div>
+                </div>
+                <div class="map-slider-overlay"></div>
+
             </div>
             <div class="content-section tags">
                 <ui class="ui stackable grid centered">
@@ -173,7 +180,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Prophylaxe</h5>
+                                                    <h5>Prophylaxe <i class="icon help circle popup-info" data-html="<p>Diese Information geht aus der, seit der Einführung der eGk, elektronisch geführten Patientenakte hervor.</p>"></i></h5>
                                                     (06 2004)
                                                 </div>
                                             </div>
@@ -184,7 +191,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="content twelve wide column">
-                                                    <h5>Gesundheitliche Risiken</h5>
+                                                    <h5>Gesundheitliche Risiken <i class="icon help circle popup-info" data-html="<p>Diese Information konnte durch das Kaufverhalten erfasst werden</p>"></i></h5>
                                                     <div class="ui tag mini labels" data-vds-element="false">
                                                         <div class="ui label">Raucher</div> <div class="ui label">Trinkt Alkohol</div>
                                                     </div>
@@ -224,7 +231,7 @@
                                             <div class="stats-list-item ui grid">
                                                 <div class="value four wide column">
                                                     <span class="text">
-                                                        <i class="heterosexual icon"></i>
+                                                        <i class="icon-s christ"></i>
                                                     </span>
                                                 </div>
                                                 <div class="content twelve wide column">
@@ -261,7 +268,7 @@
                                         <div class="sub header">Stadtsparkasse Düsseldorf</div>
                                     </div>
                                 </h2>
-                                <div class="ui grid konto-charts-wrapper stackable">
+                                <div class="ui grid konto-charts-wrapper box-stats-equal stackable">
                                     <div class="ten wide column">
                                         <div id="konto-charts">
                                             <canvas id="canvas-konto" height="200" width="600"></canvas>
@@ -276,39 +283,79 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <table class="ui table konto-table">
-                                    <tbody>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="collapsing">22.02.15</td>
-                                            <td>Verwendungszweck</td>
-                                            <td>Konto-Nr: 15614651</td>
-                                            <td class="right aligned collapsing">+ 330,00€</td>
-                                            <td class="collapsing hidden-phone"><i class="icon chevron up tc-green"></i></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="swiper-container swiper-container1">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <table class="ui table konto-table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="yesterday">22.02.15</td>
+                                                        <td>Tankstelle</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 49,68€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="today">22.02.15</td>
+                                                        <td>Geldautomat Düsseldorf Oberbilk</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 250,00€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="today">22.02.15</td>
+                                                        <td>Essen im Restaurant</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 8,90€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="yesterday">22.02.15</td>
+                                                        <td>Supermarkt</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 68,90€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <table class="ui table konto-table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="yesterday">22.02.15</td>
+                                                        <td>Tankstelle</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 68,90€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="tdbyesterday">22.02.15</td>
+                                                        <td>Trinkhalle</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 5,40€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="tdbyesterday">22.02.15</td>
+                                                        <td>Essen im Restaurant</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 14,40€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="collapsing" data-date="tdbyesterday">22.02.15</td>
+                                                        <td>Geldautomat</td>
+                                                        <td>Konto-Nr: 15614651</td>
+                                                        <td class="right aligned collapsing">- 180,00€</td>
+                                                        <td class="collapsing hidden-phone"><i class="icon chevron down tc-red"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
                             </div>
                             <div class="content" data-vds-element="true">
                                 <div class="ui center aligned segment">
@@ -331,7 +378,7 @@
                                                 </div>
                                             </div>
                                         </h2>
-                                        <div class="ui grid communication-stats">
+                                        <div class="ui grid communication-stats box-stats-equal">
                                             <div class="eight wide column">
                                                 <div class="ui grid">
                                                     <div class="six wide column">8</div>
@@ -340,7 +387,7 @@
                                             </div>
                                             <div class="eight wide column">
                                                 <div class="ui grid">
-                                                    <div class="six wide column">4</div>
+                                                    <div class="six wide column">8</div>
                                                     <div class="ten wide column">ausgehende Anrufe</div>
                                                 </div>
                                             </div>
@@ -348,30 +395,89 @@
                                                 0 ungewöhnliche Anrufe
                                             </div>
                                         </div>
-                                        <table class="ui table unstackable">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="collapsing"><i class="forward mail disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="swiper-container swiper-container2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply mail disabled icon"></i></td>
+                                                                <td class="collapsing">0235 84A48416</td>
+                                                                <td class="right aligned collapsing">1m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply mail disabled icon"></i></td>
+                                                                <td class="collapsing">0515 76A45423</td>
+                                                                <td class="right aligned collapsing">0m 45s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0235 44A48416</td>
+                                                                <td class="right aligned collapsing">2m 32s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0231 84A449T1</td>
+                                                                <td class="right aligned collapsing">1m 48s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply mail disabled icon"></i></td>
+                                                                <td class="collapsing">0435 8687A416</td>
+                                                                <td class="right aligned collapsing">8m 27s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0515 76A45423</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply mail disabled icon"></i></td>
+                                                                <td class="collapsing">0235 A1SD5648</td>
+                                                                <td class="right aligned collapsing">1m 14s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0231 84A449T1</td>
+                                                                <td class="right aligned collapsing">1m 48s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply mail disabled icon"></i></td>
+                                                                <td class="collapsing">0235 541684AD</td>
+                                                                <td class="right aligned collapsing">1m 46s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 76A45423</td>
+                                                                <td class="right aligned collapsing">0m 22s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail  disabled icon"></i></td>
+                                                                <td class="collapsing">0235 44A48416</td>
+                                                                <td class="right aligned collapsing">5m 35s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail  disabled icon"></i></td>
+                                                                <td class="collapsing">0231 84A449T1</td>
+                                                                <td class="right aligned collapsing">9m 10s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +493,7 @@
                                                 </div>
                                             </div>
                                         </h2>
-                                        <div class="ui grid communication-stats">
+                                        <div class="ui grid communication-stats box-stats-equal">
                                             <div class="eight wide column">
                                                 <div class="ui grid">
                                                     <div class="six wide column">0</div>
@@ -404,30 +510,89 @@
                                                 0 ungewöhnliche Anrufe
                                             </div>
                                         </div>
-                                        <table class="ui table unstackable">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="collapsing"><i class="forward mail disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="collapsing"><i class="reply disabled icon"></i></td>
-                                                    <td class="collapsing">0515 1846484</td>
-                                                    <td class="right aligned collapsing">3m 20s</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="swiper-container swiper-container3">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <table class="ui table unstackable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="forward mail disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="collapsing"><i class="reply disabled icon"></i></td>
+                                                                <td class="collapsing">0515 1846484</td>
+                                                                <td class="right aligned collapsing">3m 20s</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -449,7 +614,7 @@
                                 <i class="browser icon"></i>
                                 <div class="content">
                                     Aktivitätsprotokoll
-                                    <div class="sub header">von 'Max Mustermann'</div>
+                                    <div class="sub header">von 'Thomas Mangold'</div>
                                 </div>
                             </h3>
                             <div class="ui feed dividing">
@@ -459,7 +624,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a>
+                                            <a class="user">Thomas Mangold</a>
                                             gefällt nun <a class="user">Bild Zeitung</a>
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
@@ -474,7 +639,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a> chattet mit
+                                            <a class="user">Thomas Mangold</a> chattet mit
                                             <a class="user">Elliot Fu</a>
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
@@ -490,7 +655,7 @@
                                     <div class="content">
                                         <div class="summary">
                                             <a class="user">Elliot Fu</a>
-                                            markiert <a class="user">Max Mustermann</a> auf einem <a>Foto</a>
+                                            markiert <a class="user">Thomas Mangold</a> auf einem <a>Foto</a>
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
                                         <div class="meta">
@@ -504,7 +669,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a> chattet mit
+                                            <a class="user">Thomas Mangold</a> chattet mit
                                             <a class="user">Maria Schulz</a>
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
@@ -665,12 +830,12 @@
                 </div>
                 <div class="ui bottom attached tab segment" data-tab="second">
                     <div class="ui grid stackable">
-                        <div class="sixteen wide mobile eight wide tablet six wide computer column">
+                        <div class="sixteen wide mobile six wide tablet six wide computer column">
                             <h3 class="ui dividing header">
                                 <i class="browser icon"></i>
                                 <div class="content">
                                     Aktivitätsprotokoll
-                                    <div class="sub header">von 'Max Mustermann'</div>
+                                    <div class="sub header">von 'Thomas Mangold'</div>
                                 </div>
                             </h3>
                             <div class="ui feed dividing">
@@ -680,7 +845,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a>
+                                            <a class="user">Thomas Mangold</a>
                                             hat <a class="user">RT Deutsch</a> abonniert.
                                             <div class="date">vor 13 Stunden</div>
                                         </div>
@@ -695,7 +860,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a> gefällt das <a class="user">Video</a> von
+                                            <a class="user">Thomas Mangold</a> gefällt das <a class="user">Video</a> von
                                             <a class="user">Elliot Fu</a>
                                             <div class="date">vor 15 Stunde</div>
                                         </div>
@@ -710,7 +875,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a> hat ein <a class="user">Video</a> von
+                                            <a class="user">Thomas Mangold</a> hat ein <a class="user">Video</a> von
                                             <a class="user">Kevin</a> angesehen
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
@@ -725,24 +890,8 @@
                                     </div>
                                     <div class="content">
                                         <div class="summary">
-                                            <a class="user">Max Mustermann</a> hat ein <a class="user">Video</a> von
+                                            <a class="user">Thomas Mangold</a> hat ein <a class="user">Video</a> von
                                             <a class="user">Kevin</a> angesehen
-                                            <div class="date">vor 1 Stunde</div>
-                                        </div>
-                                        <div class="meta">
-                                           <a class="like"><i class="search icon"></i> Detail-Informationen auf YouTube</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="event">
-                                    <div class="label">
-                                        <img src="images/persona_versicherungskaufmann.png">
-                                    </div>
-                                    <div class="content">
-                                        <div class="summary">
-                                            <a class="user">Elliot Fu</a>
-                                            added you as a friend
-
                                             <div class="date">vor 1 Stunde</div>
                                         </div>
                                         <div class="meta">
@@ -865,7 +1014,12 @@
                     </div>
 
                 </div>
-                <div class="ui bottom attached tab segment" data-tab="third"> Third </div>
+                <div class="ui bottom attached tab segment" data-tab="third">
+                    <div class="ui segment twitter-placeholder">
+                        <p><i class="notched circle loading icon"></i></p>
+                        <p>Zur Zeit können aus technischen Gründen keine Daten abgerufen werden.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="meta-bar">
@@ -1014,7 +1168,7 @@
                         <i class="write icon"></i>
                         <div class="content">
                             <div class="title">
-                                <a href="" target="_blank">Petition unterschreiben</a>
+                                <a href="https://www.campact.de/vorrat/appell2014/teilnehmen/" target="_blank">Petition unterschreiben</a>
                                 <i class="icon external"></i>
                             </div>
                         </div>
@@ -1026,6 +1180,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="site-info ui grid stackable">
+                    <div class="ten wide column">
+                        <p>Diese Info-Seite wurde auf gitHub unter der "MIT License" veröffentlicht.</p>
+                    </div>
+                    <div class="six wide column">
+                        <a href="https://github.com/Bundes-Adler-de/vds-info" target="_blank" class="ui basic inverted big button fluid">zu&nbsp;&nbsp;&nbsp;<i class="icon github"></i>gitHub wechseln</a>
+                    </div>
+                </div>
             </div>
             <div class="meta-bar">
                 <div class="container">
@@ -1034,6 +1196,18 @@
                         <div class="sharewidget clearfix" data-url="http://www.bundes-adler.de" data-text=""></div>
                     </div>
                 </div>
+            </div>
+            <div class="content-section comments">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = 'bundesadler';
+                    (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
             <div class="content-section bundes-adler clearfix">
                 <div class="ui grid stackable">
@@ -1048,6 +1222,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
