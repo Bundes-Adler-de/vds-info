@@ -4,8 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Der gläserne Bürger - Die Vorratsdatenspeicherung</title>
-        <meta name="description" content="Eine fiktive grafische Auswertung gesammelter Daten eines Bürgers mit besonderem Bezug auf dier Vorratsdatenspeicherung.">
+        <meta name="description" content="Eine fiktive grafische Auswertung gesammelter Daten eines Bürgers, mit besonderem Bezug auf dier Vorratsdatenspeicherung.">
         <meta name="keywords" content="Vorratsdatenspeicherung, Höchstspeicherfrist, Mindestspeicherfrist, Verkehrsdaten, Standortdaten, Bewegungsprofil, Simulation, Auswertung, Big-Data" />
+
+        <link rel="shortcut icon" href="http://glaesern.bundes-adler.de/favicon.ico" type="image/png" />
+        <link rel="icon" href="http://glaesern.bundes-adler.de/favicon.ico" type="image/png" />
+
+        <meta property="og:title" content="Der gläserne Bürger - Die Vorratsdatenspeicherung"/>
+        <meta property="og:image" content="http://glaesern.bundes-adler.de/images/der_glaeserne_buerger_bundes-adler.de.jpg"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://glaesern.bundes-adler.de"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,11 +26,6 @@
         <link rel="stylesheet" href="css/style.css">
 
         <script src="js/libs/modernizr-2.8.3.min.js"></script>
-
-        <meta property="og:title" content="Der gläserne Bürger - Die Vorratsdatenspeicherung"/>
-        <meta property="og:image" content="images/der_glaeserne_buerger_bundes-adler.de.jpg"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="http://glaesern.bundes-adler.de"/>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -45,6 +48,12 @@
                         <div class="persona-nav-item active column">
                             <a href="kriminell.html"><img src="images/persona_kriminell.png" alt="" class="ui circular image"></a>
                         </div>
+                    </div>
+                </div>
+                <div class="vds-switch">
+                    <div class="ui toggle checkbox">
+                        <input type="checkbox" name="vds-merkmale">
+                        <label>Nur VDS-Merkmale zeigen</label>
                     </div>
                 </div>
             </div>
@@ -125,9 +134,13 @@
             </div>
             <div class="content-section map-slider">
                 <div id="map-slider"></div>
-                <div id="map-slider-value"></div>
+                <div id="map-slider-value-container">
+                    <div id="map-slider-value">12:00 Uhr</div>
+                    <div class="map-slider-overlay-left">(</div>
+                    <div class="map-slider-overlay-right">) <a href="https://netzpolitik.org/2015/standort-bei-beginn-der-internetverbindung-bewegungsprofile-durch-vorratsdatenspeicherung-leicht-gemacht/" target="_blank" class="red icon help circle popup-info" data-html="<p>Laut Gesetzentwurf sollen keine Bewegungsprofile erstellt werden. Jedoch werden alle notwendigen Daten, um ein umfangreiches Bewegungsprofil zu erstellen erfasst.</p>">*</a></div>
+                </div>
+                <div class="map-slider-overlay"></div>
             </div>
-
             <div class="content-section body-stats">
                 <div class="ui grid stackable">
                     <div class="four wide column">
@@ -333,7 +346,7 @@
                 <div class="container">
                     <div class="social-share">
                         <h3 class="visuallyhidden">Teilen:</h3>
-                        <div class="sharewidget clearfix" data-url="http://www.bundes-adler.de" data-text=""></div>
+                        <div class="sharewidget clearfix" data-url="http://glaesern.bundes-adler.de/" data-text=""></div>
                     </div>
                 </div>
             </div>
@@ -408,19 +421,18 @@
                 <p>Mit der Einführung des Gesetzes efolgt stets eine Speicherung. Lediglich die Herrausgabe erfolgt auf gerichtlichen Beschluss.</p>
             </div>
             <div class="content-section gruende-dagegen">
-                <h2>6 Gründe gegen die Vorratsdatenspeicherung</h2>
+                <h2>5 Gründe gegen die Vorratsdatenspeicherung</h2>
                 <ul class="gruende-dagegen-list">
                     <li><span class="indicator">1</span>Ansammlungen von Dateien sind ein großes Sicherheitsrisiko.</li>
                     <li><span class="indicator">2</span>Im Falle eines plötzlichen Regierungswechsel oder einer Krisensituation, können die gesammelten Informationen zweckentfremdet werden.</li>
                     <li><span class="indicator">3</span>Die Maßnahmen der Vorratsdatenspeicherung - zur Bekämpfung der Kriminalität - lassen sich sehr einfach umgehen.</li>
                     <li><span class="indicator">4</span>Durch die Einführung der Vorratsdatenspeicherung wird ein neuer technischer Standard gesetzt und eine neue Akzeptanz für Eingriffe in die Privatsspäre geschaffen.</li>
                     <li><span class="indicator">5</span>Der Zugriff auf die Daten ist eine große Bürde und sollte daher nicht in Händen einzelner Privatunternehmen bzw. Personen liegen.</li>
-                    <li><span class="indicator">6</span><strong>Sogar die Bild-zeitung ist dagegen.</strong></li>
                 </ul>
             </div>
             <div class="content-section vds-text">
                 <h2>Der neue Gesetzentwurf im Detail</h2>
-                <p class="intro-p">Die Bundesregierung möchte erneut den Versuch starten und eine Vorratsdatenspeicherung einführen. Der bisherige <a href="" target="_blank">Gesetzentwurf</a> sieht folgendes vor:</p>
+                <p class="intro-p">Die Bundesregierung möchte erneut den Versuch starten und eine Vorratsdatenspeicherung einführen. Der bisherige <a href="https://www.bundesrat.de/SharedDocs/drucksachen/2015/0201-0300/249-15.pdf?__blob=publicationFile&v=1" target="_blank">Gesetzentwurf</a> sieht folgendes vor:</p>
                 <div class="ui grid equal height stackable">
                     <div class="ten wide column">
                         <div class="ui stackable grid gesetz-detail-list">
@@ -545,7 +557,7 @@
                 <div class="container">
                     <div class="social-share">
                         <h3>Diese Seite teilen</h3>
-                        <div class="sharewidget clearfix" data-url="http://www.bundes-adler.de" data-text=""></div>
+                        <div class="sharewidget clearfix" data-url="http://glaesern.bundes-adler.de/" data-text=""></div>
                     </div>
                 </div>
             </div>
@@ -565,10 +577,22 @@
         </div>
     </div>
 
+    <a href="https://github.com/Bundes-Adler-de/vds-info" target="_blank" class="wip-badge">
+        <img src="images/wip_badge.png" alt="">
+    </a>
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="js/libs/Chart.min.js"></script>
     <script src="js/libs/libs.merge.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/persona_kriminell.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-54575321-2', 'auto');
+      ga('send', 'pageview');
+    </script>
     </body>
 </html>

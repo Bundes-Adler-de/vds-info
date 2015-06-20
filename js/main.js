@@ -20,10 +20,8 @@
 
 
 $(document).ready(function() {
-
     // Lazy Loading
     // -------------------------------------- //
-
     if (!Modernizr.touch) {
         $('[data-lazy-desktop-src]').each(function(index) {
             var lazySrc = $(this).attr('data-lazy-desktop-src');

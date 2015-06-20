@@ -200,7 +200,7 @@ $(document).ready(function() {
     });
 
     sigma.parsers.gexf(
-        'json/les-miserables.gexf',
+        'json/lehrerin.gexf',
         {
           container: 'network-container'
         },

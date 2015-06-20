@@ -1383,34 +1383,52 @@ html.preloader,
   margin: 0 0 14px;
   font-size: 12px; }
 
+/* line 1161, scss/style.scss */
+.wip-badge {
+  display: none; }
+  @media (min-width: 768px) {
+    /* line 1161, scss/style.scss */
+    .wip-badge {
+      display: block;
+      position: absolute;
+      left: 10px;
+      top: 0;
+      z-index: 999999; } }
+  @media (min-width: 1375px) {
+    /* line 1161, scss/style.scss */
+    .wip-badge {
+      position: fixed;
+      right: 10px;
+      left: auto; } }
+
 /* Bundes-Adler
 *******************************************************************************/
-/* line 1161, scss/style.scss */
+/* line 1180, scss/style.scss */
 .bundes-adler {
   border-top: 1px solid #cdcdcd;
   background-color: #fff; }
 
-/* line 1166, scss/style.scss */
+/* line 1185, scss/style.scss */
 .bundes-adler p {
   font-size: 1.5em;
   margin-top: 2rem;
   text-align: center; }
   @media (min-width: 768px) {
-    /* line 1166, scss/style.scss */
+    /* line 1185, scss/style.scss */
     .bundes-adler p {
       text-align: left; } }
 
-/* line 1174, scss/style.scss */
+/* line 1193, scss/style.scss */
 .bundes-adler-logo {
   text-align: center;
   display: block; }
 
-/* line 1178, scss/style.scss */
+/* line 1197, scss/style.scss */
 .bundes-adler-logo .logo {
   display: block;
   margin: 0 auto; }
 
-/* line 1182, scss/style.scss */
+/* line 1201, scss/style.scss */
 .bundes-adler-logo span {
   color: #666;
   display: block;
