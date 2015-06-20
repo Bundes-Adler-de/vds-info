@@ -180,7 +180,7 @@ $(document).ready(function() {
 
     $('#circle-zahnarzt').circleProgress({
         value: .75,
-        size: 40,
+        size: 120,
         lineCap: 'round',
         fill: {
             color: "#333"
@@ -190,7 +190,7 @@ $(document).ready(function() {
     });
     $('#circle-krebs').circleProgress({
         value: .25,
-        size: 40,
+        size: 120,
         lineCap: 'round',
         fill: {
             color: "#333"

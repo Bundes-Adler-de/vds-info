@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     var map = L.map('head-map', {
         zoomControl: false
-    }).setView([52.497451335964826, 13.325543772300762], 13);
+    }).setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
 
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         maxZoom: 18,
@@ -23,115 +23,121 @@ $(document).ready(function() {
     var popup = L.popup();
 
     var positionCircleOptions =  { color: 'red', fillColor: '#f03', fillOpacity: 0.5 }
-    var positionCircle = L.circle([52.497451335964826, 13.325543772300762], 800, positionCircleOptions).addTo(map).bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
+    var positionCircle = L.circle([52.495465660351186, 13.382792841514629], 800, positionCircleOptions).addTo(map).bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
 
 
     function mapSliderUpdate() {
         var mapSliderValue = $('#map-slider').val().substr(0, 2);
             console.log(mapSliderValue);
             if (mapSliderValue == '1:') {
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13);
             }
             if (mapSliderValue == '2:') {
-                positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13);
+                positionCircle.setLatLng([52.50878887072891, 13.419099222740215])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>118 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '3:') {
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
             }
             if (mapSliderValue == '4:') {
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
             }
             if (mapSliderValue == '5:') {
-                positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13);
+                positionCircle.setLatLng([52.50878887072891, 13.419099222740215])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>48 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '6:') {
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
             }
             if (mapSliderValue == '7:') {
-                             map.setView([52.50878887072891, 13.419099222740215], 13);
-                positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13);
+                positionCircle.setLatLng([52.50878887072891, 13.419099222740215])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>26 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '8:') {
-                             map.setView([52.50915454897445, 13.404937159141582], 13);
+                             map.setView([52.50915454897445, 13.404937159141582 - .028500000000000], 13);
                 positionCircle.setLatLng([52.50915454897445, 13.404937159141582])
-                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>26 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '9:') {
+                             map.setView([52.50669922238705, 13.388629328331035 - .028500000000000], 13).closePopup();
                 positionCircle.setLatLng([52.50669922238705, 13.388629328331035]);
-                             map.setView([52.50669922238705, 13.388629328331035], 13).closePopup();
             }
             if (mapSliderValue == '10') {
-                             map.setView([52.495465660351186, 13.382792841514629], 13);
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
                 positionCircle.setLatLng([52.495465660351186, 13.382792841514629])
-                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>368 kb Online-Traffic</p>').openPopup();
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>3 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>368 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '11') {
-                positionCircle.setLatLng([52.500481931122835, 13.320308100303691]);
-                             map.setView([52.500481931122835, 13.320308100303691], 13).closePopup();
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629]);
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13).closePopup();
             }
             if (mapSliderValue == '12') {
-                             map.setView([52.497451335964826, 13.325543772300762], 13);
-                positionCircle.setLatLng([52.497451335964826, 13.325543772300762])
-                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf</p>').openPopup();
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehende Anrufe<br><i class="icon angle right"></i>1 ausgehender Anruf<br><i class="icon angle right"></i>26 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '13') {
-                             map.setView([52.49666752735588, 13.32657374056248], 13);
-                positionCircle.setLatLng([52.49666752735588, 13.32657374056248])
-                    .bindPopup('<p><i class="icon cart large"></i> Essen im Restaurant</p><p><i class="icon angle right"></i>-8.90€</p>').openPopup();
+                             map.setView([52.495465660351186, 13.392792841514629 - .028500000000000], 13);
+                positionCircle.setLatLng([52.495465660351186, 13.392792841514629])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>-8.90€<br><i class="icon angle right"></i>26 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '14') {
-                positionCircle.setLatLng([52.496876544351124, 13.326058756431621]);
-                             map.setView([52.496876544351124, 13.326058756431621], 13).closePopup();
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13).closePopup();
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629]);
             }
             if (mapSliderValue == '15') {
-                             map.setView([52.50669922238707, 13.3730081430283], 13);
-                positionCircle.setLatLng([52.50669922238707, 13.3730081430283])
-                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf</p>').openPopup();
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf<br><i class="icon angle right"></i>26 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '16') {
-                positionCircle.setLatLng([52.52905330425592, 13.384423624595684]);
-                             map.setView([52.52905330425592, 13.384423624595684], 13).closePopup();
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>278 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '17') {
-                positionCircle.setLatLng([52.52905330425592, 13.38476694734959]);
-                             map.setView([52.52905330425592, 13.38476694734959], 13).closePopup();
+                             map.setView([52.495465660351186, 13.382792841514629 - .028500000000000], 13);
+                positionCircle.setLatLng([52.495465660351186, 13.382792841514629])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehender Anruf<br><i class="icon angle right"></i>748 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '18') {
-                             map.setView([52.52920995160755, 13.385625254234355], 13);
+                             map.setView([52.52920995160755, 13.385625254234355 - .028500000000000], 13);
                 positionCircle.setLatLng([52.52920995160755, 13.385625254234355])
-                    .bindPopup('<p><i class="icon cart large"></i> Einkauf im Supermarkt</p><p><i class="icon angle right"></i>-49.68€</p>').openPopup();
+                    .bindPopup('<p><i class="icon cart large"></i> Einkauf im Supermarkt</p><p><i class="icon angle right"></i>-32,68€<br><i class="icon angle right"></i>49 kb Online-Traffic</p><p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 ausgehende Anrufe</p>').openPopup();
             }
             if (mapSliderValue == '19') {
-                             map.setView([52.51087841972251, 13.451886545738262], 13);
+                             map.setView([52.51087841972251, 13.451886545738262 - .028500000000000], 13);
                 positionCircle.setLatLng([52.51087841972251, 13.451886545738262])
                     .bindPopup('<p><i class="icon money large"></i>Geldautomat in der Bankfiliale</p> <p>-150,00€</p>').openPopup()
             }
             if (mapSliderValue == '20') {
                              map.setView([52.495622427475745, 13.439612757286113], 14);
                 positionCircle.setLatLng([52.495622427475745, 13.439612757286113])
-                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf</p>').openPopup();
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>1 eingehender Anruf<br><i class="icon angle right"></i>129 kb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '21') {
-                positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
+                positionCircle.setLatLng([52.50878887072891, 13.419099222740215])
+                    .bindPopup('<p><i class="icon mobile large"></i> Mobiltelefon</p><p><i class="icon angle right"></i>2 eingehender Anruf<br><i class="icon angle right"></i>3.5 mb Online-Traffic</p>').openPopup();
             }
             if (mapSliderValue == '22') {
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
             }
             if (mapSliderValue == '23') {
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
             }
             if (mapSliderValue == '24') {
                 positionCircle.setLatLng([52.50878887072891, 13.419099222740215]);
-                             map.setView([52.50878887072891, 13.419099222740215], 13).closePopup();
+                             map.setView([52.50878887072891, 13.419099222740215 - .028500000000000], 13).closePopup();
             }
     }
 
@@ -259,8 +265,8 @@ $(document).ready(function() {
     // -------------------------------------- //
 
     $('#circle-zahnarzt').circleProgress({
-        value: .75,
-        size: 40,
+        value: .85,
+        size: 120,
         lineCap: 'round',
         fill: {
             color: "#333"
@@ -269,8 +275,8 @@ $(document).ready(function() {
         $(this).find('strong').text(String(stepValue.toFixed(2).substr(2)) + '%');
     });
     $('#circle-krebs').circleProgress({
-        value: .25,
-        size: 40,
+        value: .75,
+        size: 120,
         lineCap: 'round',
         fill: {
             color: "#333"

@@ -618,6 +618,11 @@ body {
             font-size: 20px;
         }
     }
+    .social-tabs .menu .item:first-child {
+        @media (min-width: 768px) {
+            border-left: 0;
+        }
+    }
     .social-tabs .ui.segment.attached {
         padding-top: 30px;
         border: 0;
@@ -1141,9 +1146,9 @@ html.preloader,
 
 
 .leaflet-popup-content {
-  margin: 10px 20px;
+  margin: 10px 15px;
   line-height: 1.4;
-  width: 180px !important;
+  width: 200px !important;
 }
 
 
