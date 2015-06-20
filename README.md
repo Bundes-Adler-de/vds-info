@@ -6,6 +6,9 @@ Das Projekt ist noch nicht fertig und enthält an einigen Stellen noch unlogisch
 
 Es gibt viele weitere Ideen, die Info-Seite noch zu verbessern. Aus zeitgründen und den aktuellen Geschehnissen, haben wir uns entschlossen, mit diesem Stand online zu gehen.
 
+Die Seite kann unter folgender Adresse aufgerufen werden:
+http://glaesern.bundes-adler.de/
+
 Es folgen ein paar weitere Ideen:
 
 * Weitere Dienste hinzufügen (PAYBACK, Instagramm, Skype etc.)
