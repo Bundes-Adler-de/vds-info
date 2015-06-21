@@ -9,10 +9,12 @@ Es gibt viele weitere Ideen, die Info-Seite noch zu verbessern. Aus zeitgründen
 Die Seite kann unter folgender Adresse aufgerufen werden:
 http://glaesern.bundes-adler.de/
 
-Es folgen ein paar weitere Ideen:
+Denkbare Ideen:
 
+* Umsetzung mit angular.js oder ähnlichen
+* Echtzeit-Aktualisierung der Inhalte
 * Weitere Dienste hinzufügen (PAYBACK, Instagramm, Skype etc.)
-* Echtzetit-Aktualisierung der Inhalte
+* Weitere Informationen hinzufügen (Grundbucheinträge, KFZ, Lebenslauf-Timeline)
 * Feiner granuliertes Bewegungsprotokoll
 * Suchmaske als weitere Ansicht hinzufügen (Filter-Facetten)
 * Inhalt: VDS-Timeline erstellen, welche die wichtigen Stationen der VDS aufzeigt.
