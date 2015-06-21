@@ -153,13 +153,37 @@ body {
         background: $white;
         border-bottom: 1px solid $mediumGrey;
         padding: 15px 10px;
-        position: relative;
         z-index: 999999;
+        position: relative;
+        @include transition(all 400ms ease);
         @media (min-width: 768px) {
             padding-left: 0;
             padding-right: 0;
         }
     }
+    /* fixed */
+    .fixed_header #header {
+        @media (min-width: 768px) {
+            position: fixed;
+            top: -79px;
+            -webkit-transform: translateY(0%); /* Safari */
+            transform: translateY(0%);
+            max-width: 1200px;
+        }
+    }
+    .fixed_header_in #header {
+        @media (min-width: 768px) {
+            -webkit-transform: translateY(100%); /* Safari */
+            transform: translateY(100%);
+        }
+    }
+    .fixed_header #header + .content-section {
+        @media (min-width: 768px) {
+            margin-top: 79px;
+        }
+
+    }
+
     #header .vds-switch {
         position: absolute;
         left: 1em;
