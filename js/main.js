@@ -124,6 +124,44 @@ $(document).ready(function() {
         }
     });
 
+    // Initialize Share only when visible
+    $('.meta-bar .social-share').visibility({
+        onTopVisible: function() {
+            $(this)
+                .append('<div class="sharewidget clearfix" data-url="http://glaesern.bundes-adler.de/" data-text=""></div>')
+                .parents('.meta-bar')
+                .find('.spinner')
+                .remove();
+
+            // Share-Buttons
+            $(this).find('.sharewidget').sharrre({
+                share: {
+                  twitter: true,
+                  facebook: true,
+                  googlePlus: true
+                },
+                urlCurl: 'js/libs/sharrre.php',
+                template: '<div class="share-counter">{total}</div><a href="#" class="share-element share-facebook clearfix"><i class="icon facebook"></i>teilen</a><a href="#" class="share-element share-twitter clearfix"><i class="icon twitter"></i>tweet</a><a href="#" class="share-element share-googleplus clearfix"><i class="icon google plus"></i>+1</a><a href="#" class="share-element share-mail clearfix"><i class="icon envelope"></i>e-mail</a>',
+                enableHover: false,
+                enableTracking: true,
+                render: function(api, options){
+                  $(api.element).on('click', '.share-twitter', function() {
+                    api.openPopup('twitter');
+                    return false;
+                  });
+                  $(api.element).on('click', '.share-facebook', function() {
+                    api.openPopup('facebook');
+                    return false;
+                  });
+                  $(api.element).on('click', '.share-googleplus', function() {
+                    api.openPopup('googlePlus');
+                    return false;
+                  });
+                }
+            });
+        }
+    });
+
     // Date-Replacements
     // -------------------------------------- //
 
@@ -202,9 +240,6 @@ $(document).ready(function() {
 
 
 
-
-
-
     // Mobile Optim
     // -------------------------------------- //
 
@@ -241,52 +276,24 @@ $(document).ready(function() {
         if (Modernizr.mq('(min-width: 768px)')) {
             $('.box-stats-equal').autoheight();
         }
-
     });
-
-
 
 
     // Simple Preloader & Splash-Screen
     // -------------------------------------- //
 
-    $('#preloader .persona-nav a').click(function(event) {
-        removePreloader();
-    });
+    // $('#preloader .persona-nav a').click(function(event) {
+    //     removePreloader();
+    // });
 
-    $('.preloader').removeClass('preloader');
+    // $('.preloader').removeClass('preloader');
 
-    function removePreloader() {
-        $('.preloader').removeClass('preloader');
-        $('#preloader').fadeOut('slow', function() {
-        });
-    }
+    // function removePreloader() {
+    //     $('.preloader').removeClass('preloader');
+    //     $('#preloader').fadeOut('slow', function() {
+    //     });
+    // }
 
 
-    // Share-Buttons
-    $('.sharewidget').sharrre({
-        share: {
-          twitter: true,
-          facebook: true,
-          googlePlus: true
-        },
-        urlCurl: 'js/libs/sharrre.php',
-        template: '<div class="share-counter">{total}</div><a href="#" class="share-element share-facebook clearfix"><i class="icon facebook"></i>teilen</a><a href="#" class="share-element share-twitter clearfix"><i class="icon twitter"></i>tweet</a><a href="#" class="share-element share-googleplus clearfix"><i class="icon google plus"></i>+1</a><a href="#" class="share-element share-mail clearfix"><i class="icon envelope"></i>e-mail</a>',
-        enableHover: false,
-        enableTracking: true,
-        render: function(api, options){
-          $(api.element).on('click', '.share-twitter', function() {
-            api.openPopup('twitter');
-            return false;
-          });
-          $(api.element).on('click', '.share-facebook', function() {
-            api.openPopup('facebook');
-            return false;
-          });
-          $(api.element).on('click', '.share-googleplus', function() {
-            api.openPopup('googlePlus');
-            return false;
-          });
-        }
-    });
+
 });
