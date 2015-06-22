@@ -165,25 +165,15 @@ body {
     .fixed_header #header {
         @media (min-width: 768px) {
             position: fixed;
-            top: -79px;
-            -webkit-transform: translateY(0%); /* Safari */
-            transform: translateY(0%);
+            top: 0;
             max-width: 1200px;
-        }
-    }
-    .fixed_header_in #header {
-        @media (min-width: 768px) {
-            -webkit-transform: translateY(100%); /* Safari */
-            transform: translateY(100%);
         }
     }
     .fixed_header #header + .content-section {
         @media (min-width: 768px) {
             margin-top: 79px;
         }
-
     }
-
     #header .vds-switch {
         position: absolute;
         left: 1em;
@@ -670,6 +660,10 @@ body {
     }
     .social-group:hover .social-group-image { opacity: .8; }
     .social-group:hover .social-group-image:hover { opacity: 1; }
+
+    .social-group-image img {
+        width: 100%;
+    }
 
         .social-group-image .social-group-image-label {
             background: $mediumGrey;
@@ -1169,9 +1163,6 @@ html.preloader,
         text-align: center;
     }
 
-
-
-
 .leaflet-popup-content {
   margin: 10px 15px;
   line-height: 1.4;
@@ -1190,14 +1181,9 @@ html.preloader,
     @media (min-width: 768px) {
         display: block;
         position: absolute;
-        left: 10px;
+        left: 1.5rem;
         top: 0;
         z-index: 999999;
-    }
-    @media (min-width: 1375px) {
-        position: fixed;
-        right: 10px;
-        left: auto;
     }
 }
 
