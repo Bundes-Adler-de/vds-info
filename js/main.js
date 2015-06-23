@@ -20,47 +20,7 @@
 
 
 $(document).ready(function() {
-    // Sticky-Header
-    // -------------------------------------- //
-    $('#header').visibility({
-        once: false,
-        onTopVisible: function(calculations) {
-          // top is on screen
-          console.log('Header onTopVisible');
-        },
-        onTopPassed: function(calculations) {
-          // top of element passed
-          console.log('Header onTopPassed');
-        },
-        onBottomVisible: function(calculations) {
-          // top of element passed
-          console.log('Header onBottomVisible');
-        },
-        onPassing: function(calculations) {
-          // top of element passed
-          $('#page').removeClass('fixed_header');
-          $('#page').removeClass('fixed_header_in');
-          console.log('Header onPassing');
-        },
-        onBottomPassed: function(calculations) {
-          $('#page').addClass('fixed_header');
-          $('#page').addClass('fixed_header_in');
-          console.log('Header onBottomPassed');
-        },
-        onTopVisibleReverse: function(calculations) {
-          // top of element passed
-          console.log('Header onTopVisibleReverse');
-        },
-        onTopPassedReverse: function(calculations) {
-          // top of element passed
-          console.log('Header onTopPassedReverse');
-        },
-        onUpdate: function(calculations) {
-          // do something whenever calculations adjust
-          console.log('Header onUpdate');
-        }
-      })
-    ;
+
     // Lazy Loading
     // -------------------------------------- //
     if (!Modernizr.touch) {
@@ -68,6 +28,22 @@ $(document).ready(function() {
             var lazySrc = $(this).attr('data-lazy-desktop-src');
             console.log(lazySrc);
             $(this).attr('src', lazySrc);
+        });
+        // Sticky-Header
+        // -------------------------------------- //
+        $('#header').visibility({
+            once: false,
+            onPassing: function(calculations) {
+              // top of element passed
+              $('#page').removeClass('fixed_header');
+              $('#page').removeClass('fixed_header_in');
+              console.log('Header onPassing');
+            },
+            onBottomPassed: function(calculations) {
+              $('#page').addClass('fixed_header');
+              $('#page').addClass('fixed_header_in');
+              console.log('Header onBottomPassed');
+            }
         });
     }
     $('[data-lazy-src]').each(function(index) {
