@@ -162,9 +162,27 @@ $(document).ready(function() {
         }
     });
 
-    // Date-Replacements
-    // -------------------------------------- //
+    // Initialize Disqus only when visible
+    $('.content-section.comments').visibility({
+        onTopVisible: function() {
+            $(this)
+                .append('');
+            var disqus_shortname = 'bundesadler';
+            (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        }
+    });
 
+
+
+
+
+
+    // Date-Replacements
+    // --------------------------------------
     var d = new Date();
     var year    = d.getFullYear().toString().substr(2,2);
     var month   = ("0" + (d.getMonth()+1)).slice(-2);
