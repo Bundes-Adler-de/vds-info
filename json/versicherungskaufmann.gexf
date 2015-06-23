@@ -321,13 +321,13 @@
         <viz:position x="488.13535" y="356.8573" z="0.0"></viz:position>
         <viz:color r="130" g="130" b="130"></viz:color>
       </node>
-      <node id="48" label="Krimeneller Bekannter">
+      <node id="48" label="Hubert">
         <attvalues>
           <attvalue for="modularity_class" value="8"></attvalue>
         </attvalues>
         <viz:size value="61.600006"></viz:size>
         <viz:position x="387.89572" y="110.462326" z="0.0"></viz:position>
-        <viz:color r="193" g="14" b="14"></viz:color>
+        <viz:color r="130" g="130" b="130"></viz:color>
       </node>
       <node id="49" label="Gillenormand">
         <attvalues>
